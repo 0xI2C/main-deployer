@@ -1,3 +1,10 @@
+sudo apt-get update -y
+if (( $(echo "$(lsb_release -r -s) < $21.04" |bc -l) )); then
+    sudo apt-get install qemu-kvm libvirt-bin virtinst bridge-utils cpu-checker -y
+else
+    sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
+fi
+
 sudo adduser $(whoami) kvm
 newgrp kvm
 wget https://github.com/0xI2C/resources-required/raw/main/as-provider.sh
