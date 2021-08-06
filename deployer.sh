@@ -8,8 +8,8 @@ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 export PATH="$HOME/.local/bin:$PATH"
 golemsp settings set --node-name $(date +%s)
 golemsp settings set --starting-fee 0
-golemsp settings set --env-per-hour 0.01
-golemsp settings set --cpu-per-hour 0.016
+golemsp settings set --env-per-hour 0.0
+golemsp settings set --cpu-per-hour 0.015
 golemsp settings set --account 0xc018A306Ab457e2aB37FEA9AEAa06237f1B00476
 sudo systemctl enable golemsp.service
 sudo systemctl start golemsp.service
