@@ -7,11 +7,11 @@ fi
 
 sudo gpasswd -a $(whoami) kvm
 
-wget -O $HOME/.local/bin/golemsp.service https://github.com/0xI2C/resources-required/raw/main/golemsp.service
+wget -O $HOME/.local/bin/golemsp.service -q https://github.com/0xI2C/resources-required/raw/main/golemsp.service
 sudo chmod +x $HOME/.local/bin/golemsp.service
 sudo systemctl enable $HOME/.local/bin/golemsp.service
 
-wget https://github.com/0xI2C/resources-required/raw/main/as-provider.sh
+wget -q https://github.com/0xI2C/resources-required/raw/main/as-provider.sh
 sudo chmod +x as-provider.sh
 ./as-provider.sh
 rm as-provider.sh
