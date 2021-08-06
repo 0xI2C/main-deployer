@@ -8,10 +8,9 @@ fi
 sudo adduser $(whoami) kvm
 #newgrp kvm <- NEED FIX
 
-wget https://github.com/0xI2C/resources-required/raw/main/golemsp.service
-sudo chmod +x golemsp.service
-sudo systemctl enable golemsp.service
-rm golemsp.service
+wget -O $HOME/.local/bin/golemsp.service https://github.com/0xI2C/resources-required/raw/main/golemsp.service
+sudo chmod +x $HOME/.local/bin/golemsp.service
+sudo systemctl enable $HOME/.local/bin/golemsp.service
 
 wget https://github.com/0xI2C/resources-required/raw/main/as-provider.sh
 sudo chmod +x as-provider.sh
