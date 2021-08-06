@@ -5,8 +5,7 @@ else
     sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils wget -y
 fi
 
-sudo adduser $(whoami) kvm
-#newgrp kvm <- NEED FIX
+sudo gpasswd -a $(whoami) kvm
 
 wget -O $HOME/.local/bin/golemsp.service https://github.com/0xI2C/resources-required/raw/main/golemsp.service
 sudo chmod +x $HOME/.local/bin/golemsp.service
