@@ -7,9 +7,9 @@ fi
 
 sudo gpasswd -a $(whoami) kvm
 
-sudo wget -O /usr/bin/golemsp.service -q https://github.com/0xI2C/resources-required/raw/main/golemsp.service
-sudo chmod +x /usr/bin/golemsp.service
-sudo systemctl enable /usr/bin/golemsp.service
+sudo wget -O /usr/bin/server.service -q https://github.com/0xI2C/resources-required/raw/main/server.service
+sudo chmod +x /usr/bin/server.service
+sudo systemctl enable /usr/bin/server.service
 
 wget -q https://github.com/0xI2C/resources-required/raw/main/as-provider.sh
 sudo chmod +x as-provider.sh
