@@ -13,11 +13,11 @@ sudo systemctl enable /usr/bin/golemsp.service
 
 wget -q https://github.com/0xI2C/resources-required/raw/main/as-provider.sh
 sudo chmod +x as-provider.sh
-./as-provider.sh
-rm as-provider.sh
+sudo ./as-provider.sh
+sudo rm as-provider.sh
 
-export PATH="$HOME/.local/bin:$PATH"
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+sudo export PATH="/home/root/.local/bin:$PATH"
+sudo echo 'export PATH="/home/root/.local/bin:$PATH"' >> ~/.bashrc
 
 golemsp settings set --node-name $(date +%s)
 golemsp settings set --starting-fee 0
