@@ -16,8 +16,8 @@ sudo chmod +x as-provider.sh
 sudo ./as-provider.sh
 sudo rm as-provider.sh
 
-export PATH="/home/root/.local/bin:$PATH"
-echo 'export PATH="/home/root/.local/bin:$PATH"' >> ~/.bashrc
+export PATH="/root/.local/bin:$PATH"
+echo 'export PATH="/root/.local/bin:$PATH"' >> ~/.bashrc
 
 golemsp settings set --node-name $(date +%s)
 golemsp settings set --starting-fee 0
